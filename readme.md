@@ -1,7 +1,4 @@
-# Inspire
-<div class="text-center">
-    <img class="img-responsive" src="/inspire.png"/>
-</div>
+
 
 <!-- SECTION My stretch goals
 - Random spell by level  https://www.dnd5eapi.co/docs/#resource-lists
@@ -52,9 +49,7 @@ store which one in local storage.
 Sweet alert on page load if there are unfinished todos
 -->
 
-Inspiration can be difficult to achieve. Keep track of your many important tasks and the weather with the subtle help of a random daily quote and beautiful scenery.
-
-## Goals
+<!-- ## Goals
 In this project students will demonstrate their ability to build a more robust application that requires multiple asynchronous calls to retrieve several different pieces of data.
 
 They will demonstrate a proficiency utilizing multiple services and controllers to handle different aspects of data all rendered to the same document. In addition they will be responsible for implementing the observer pattern and utilizing subscribers to best handle the asynchronistic aspects of this challenge. 
@@ -142,7 +137,7 @@ The todos portion of this project is the largest and will probably take the most
 
 ### Delete Request Method
 - `Delete Todo by id`
-    - /YOURNAME/todos/:todoId 
+    - /YOURNAME/todos/:todoId  -->
 
 ---------------------------------
 
@@ -164,17 +159,22 @@ The todos portion of this project is the largest and will probably take the most
  - [ ] Todo's can be marked complete (PUT)
  - [ ] The data in the Todos persists on reload
 
-### EXTENSION IDEAS 
+## EXTENSION IDEAS 
+- [ ] Random spell by level  https://www.dnd5eapi.co/docs/#resource-lists
+- [ ] D20 Roller http://roll.diceapi.com/
+- [ ] Display Djinn animation with button using api/user/pokemon
+store which one in local storage.
+- [x] Connect my own random images using api/user/heroes
+- [ ] Random image set that I actually like. New image input form
+- [ ] Clock api http://worldclockapi.com/
+- [ ] Sweet alert on page load if there are unfinished todos
+
 - On hover the quote should show the author of the quote and disappear when not hovered over
-- Allow the user to set their name and have it save to localStorage
-- Change the message from Good Morning to Good Afternoon, Evening as appropriate. 
-- Allow the user to toggle the clock from, 12hr to 24hr. 
+    (I'll change this to clicking open the random spell name to show the spell description)
+- Change the message from Good Morning to Good Afternoon, Evening as appropriate.
 - Include an Icon to show what the weather is sunny/cloudy/rainy
-- Add a button to cycle to next quote/picture
-- Add a settings so user can change to a new "theme" (font, background colors, etc.)
+- [ ] Add a button to cycle spells/djinn
+
 - `BONUS DIFFICULTY` The todo list shouldn't have to redraw every item just because one of them changed. 
     - If you think through some of the actions being performed you might find a way to optimize the list by only updating the one todo that changes at a time
     - Every time you update a todo you shouldn't have to re-`get` the entire list you already know what changed about the one todo
-    
-### Finished?
-When You are finished please submit the link to the project in the backpack. This link must be the live site.
