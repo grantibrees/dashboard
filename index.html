@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Averia+Serif+Libre:wght@300;700&family=Berkshire+Swash&family=Bilbo&family=Girassol&family=Grenze+Gotisch:wght@400;700&family=IM+Fell+DW+Pica+SC&family=IM+Fell+DW+Pica:ital@0;1&family=Metamorphous&family=Mirza:wght@400;700&family=Monofett&family=Montserrat+Subrayada&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&family=Nova+Cut&family=Oswald:wght@300;400;600&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Pirata+One&family=Reenie+Beanie&family=Special+Elite&family=Sulphur+Point&family=Trade+Winds&family=VT323&family=Yatra+One&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+		integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css"
+		class="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title> </title>
+</head>
+
+<body class="cfont-inky-typed bg main-colors">
+	<div id="bg-image">
+		<div class="spinner-border font-purple loading-spinner" id="loader" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+
+		<section class="container-fluid">
+
+			<div id="weather">
+				Your Weather Template
+			</div>
+
+			<div id="quote">
+				The Quote
+			</div>
+
+			<div class="card-body bg-transparent card-effects rounded shadow">
+				<div id="todo" class="row d-block">
+					A Todo List
+					<form onsubmit="app.todoController.addTodo(event)">
+						<div class="form-group">
+							<input type="text" name="description" class="form-control form-control-sm" placeholder="..."
+								maxlength="20" required />
+						</div>
+						<div class="d-flex">
+							<button type="submit" class="btn btn-sm btn-outline-dark justify-self-end">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+
+
+
+			<!-- For adding Images -->
+			<!-- <div>
+		<form onsubmit="app.imageController.addImage(event)">
+			<div class="form-group">
+				<label for="imageInput">Image URL</label>
+				<input type="text" class="form-control" id="url">
+				<label for="imageName">Image Name</label>
+				<input type="text" class="form-control" id="name">
+				<label for="imageDesc">Image Description</label>
+				<input type="text" class="form-control" id="desc">
+			</div>
+			<button type="submit" class="btn btn-outline-dark">Submit</button>
+		</form>
+	</div> -->
+		</section>
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script type="module" src="app/main.js"></script>
+	</div>
+</body>
+
+</html>
+<html>
