@@ -29,62 +29,10 @@
 				</div>
 			</div>
 
-			<div class="row fixed-bottom align-items-end">
-				<div class="col-4 ">Dice Roller?</div>
-				<div class="col-4 ">
-					<div id="quote">
-						The Quote
-					</div>
-				</div>
-
-
-				<div class="col-4 align-items-center justify-items-end">
-
-					<div id="todo"
-						class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-py rm-px px-3 py-1 ml-auto mr-3">
-						<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
-						<div id="todo-insert" class="mx-2 container-fluid align-items-center justify-content-around">
-							<div class="row pr-3 align-items-center">
-								<input type="checkbox" onclick="app.todoController.removeTodo()" />
-								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item 1 </h5><i
-									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
-							</div>
-							<div class="row pr-3 align-items-center">
-								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Two </h5><i
-									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
-							</div>
-							<div class="row pr-3 align-items-center">
-								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Three 8uRdfwwHb</h5><i
-									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
-							</div>
-
-						</div>
-						<form onsubmit="app.todoController.addTodo(event)">
-							<div class="form-group">
-								<div class="px-1 py-2 mx-2">
-									<input type="text" name="description" class="form-control form-control-sm"
-										placeholder='Plan Next D&D Session' maxlength="20" required />
-								</div>
-								<div class="d-flex justify-content-end">
-									<button type="submit" id="todo-btn"
-										class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
-						</form>
-
-					</div>
-				</div>
-
-			</div>
-
-
-		</section>
-
-	</div>
-
-
-
-
-	<!-- For adding Images -->
-	<!-- <div>
+			<div class="row">
+				<div class="col-4">
+					<!-- For adding Images -->
+					<!-- <div>
 		<form onsubmit="app.imageController.addImage(event)">
 			<div class="form-group">
 				<label for="imageInput">Image URL</label>
@@ -97,6 +45,75 @@
 			<button type="submit" class="btn btn-outline-dark">Submit</button>
 		</form>
 	</div> -->
+					<!-- <button type="button" onclick="app.imageController.addDjinn()" class="btn btn-outline-dark">Dark</button>
+
+				</div> -->
+				</div>
+
+				<div class="col-4">
+				</div>
+				<div class="col-4"></div>
+
+
+				<div class="row fixed-bottom align-items-end">
+					<div class="col-4">
+						<img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" />
+					</div>
+					<div class="col-4 ">
+						<div id="quote">
+							The Quote
+						</div>
+					</div>
+
+
+					<div class="col-4 align-items-center justify-items-end">
+
+						<div id="todo"
+							class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-py rm-px px-3 py-1 ml-auto mr-3">
+							<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
+							<div id="todo-insert" class="mx-2 container-fluid align-items-center justify-content-around">
+								<div class="row pr-3 align-items-center">
+									<div class="">
+										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
+									</div>
+									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item 1 </h5><i
+										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+								</div>
+								<div class="row pr-3 align-items-center">
+									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Two </h5><i
+										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+								</div>
+								<div class="row pr-3 align-items-center">
+									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Three 8uRdfwwHb</h5><i
+										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+								</div>
+
+							</div>
+							<form onsubmit="app.todoController.addTodo(event)">
+								<div class="form-group">
+									<div class="px-1 py-2 mx-2">
+										<input type="text" name="description" class="form-control form-control-sm"
+											placeholder='Plan Next D&D Session' maxlength="20" required />
+									</div>
+									<div class="d-flex justify-content-end">
+										<button type="submit" id="todo-btn"
+											class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+
+
+		</section>
+
+	</div>
+
+
+
+
+
 	</section>
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

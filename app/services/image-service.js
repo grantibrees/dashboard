@@ -22,6 +22,13 @@ class ImageService {
     this.pullImage()
   }
 
+  addDjinn() {
+    imgApi2.post("pokemon/", store.Djinn.tempObj).then(res => {
+      console.log(res.data);
+
+    }).catch(err => console.error(err))
+  }
+
   addImage(ImageData) {
     console.log(ImageData);
     let image = new Image(ImageData)

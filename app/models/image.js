@@ -97,13 +97,13 @@ export default class Image {
     this.description = data.description || "No description provided."
     this._id = data._id || null
 
-    // for adding djinn images to pokemon
-    this.name = data.name || "djinn"
-    this.img = data.img
-    this.weight = data.weight
-    this.user = data.user || "grantignotusbrees"
-    this._id = data._id || null
-    this.types = data.types
+    // // for adding djinn images to pokemon
+    // this.name = data.name || "djinn"
+    // this.img = data.img
+    // this.weight = data.weight
+    // this.user = data.user || "grantignotusbrees"
+    // this._id = data._id || null
+    // this.types = data.types
   }
 
 

@@ -30,4 +30,8 @@ export default class ImageController {
     _imageService.addImage(rawImageData)
     formData.reset()
   }
+
+  addDjinn() {
+    _imageService.addDjinn()
+  }
 }

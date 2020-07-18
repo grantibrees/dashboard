@@ -66,20 +66,19 @@ body{
   right: 46%;
 }
 
-.squaredThree label:after {
-  content: '';
-  width: 9px;
-  height: 5px;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  border: 3px solid #fcfff4;
-  border-top: none;
-  border-right: none;
-  background: transparent;
-  opacity: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+
+.clicker{
+  height: 1.5em !important;
+  width: 1.5em !important;
+  image-rendering: crisp-edges;
+}
+.clicker:hover{
+  transition: all .2s linear !important;
+  box-shadow: 0em 0em 4px 1px #f0b23eb7;
+}
+.clicker:active{
+  border: 2px solid #ffffff00;
+  box-shadow: 0em 0em 4px 1px #f0b23e00;
 }
 
 .ra-sm {

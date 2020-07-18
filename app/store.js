@@ -1,12 +1,51 @@
 import Weather from "./models/weather.js";
 import Image from "./models/image.js";
 
+let _djinnStorage = {
+  tempObj: [{
+    types: [
+      {
+        slot: 1,
+        type: {
+          name: "venus",
+          url: "https://i.imgur.com/ACAg3yG.gif"
+        }
+      },
+      {
+        slot: 2,
+        type: {
+          name: "mars",
+          url: "https://i.imgur.com/9dBSoCo.gif"
+        }
+      },
+      {
+        slot: 3,
+        type: {
+          name: "jupiter",
+          url: "https://i.imgur.com/aiJcDD4.gif"
+        }
+      },
+      {
+        slot: 4,
+        type: {
+          name: "mercury",
+          url: "https://i.imgur.com/lMHCh8s.gif"
+        }
+      }
+    ],
+    name: "djinn",
+    img: "https://i.imgur.com/mkBPOT5.gif",
+    weight: "1000",
+    user: "grantignotusbrees",
+  }]
+}
+
 let _state = {
   /**@type {Weather} */
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
   /**@type {any[]}*/
   todos: [], //TODO change 'any' to your todo model
-  /**@type {Image[]}*/
+
   tempImage: [],
   allImages: [],
   bgImage: [],
@@ -51,6 +90,10 @@ class Store {
    */
   get State() {
     return _state;
+  }
+
+  get Djinn() {
+    return _djinnStorage;
   }
   /**
    * Takes in a property to observe, and a function to run when it changes
