@@ -45,16 +45,65 @@
 // https://w.wallhaven.cc/full/j5/wallhaven-j58dj5.jpg
 // https://w.wallhaven.cc/full/2k/wallhaven-2kpo3x.jpg
 // 
-// 
+
+
+// "data": [
+//     {
+//         "types": [
+// {
+//     "slot": 1,
+//     "type": {
+//         "name": "venus",
+//         "url": "https://i.imgur.com/ACAg3yG.gif"
+//     }
+// },
+// {
+//     "slot": 2,
+//         "type": {
+//         "name": "mars",
+//         "url": "https://i.imgur.com/9dBSoCo.gif"
+//     }
+// },
+// {
+//     "slot": 3,
+//         "type": {
+//         "name": "jupiter",
+//         "url": "https://i.imgur.com/aiJcDD4.gif"
+//     }
+// },
+// {
+//     "slot": 4,
+//         "type": {
+//         "name": "mercury",
+//         "url": "https://i.imgur.com/lMHCh8s.gif"
+//     }
+// }
+//         ],
+//     "_id": "5f0f40b5626eeb001771bb69",
+//     "name": "djinn",
+//     "img": "https://i.imgur.com/mkBPOT5.gif",
+//     "weight": "1000",
+//     "user": "grantignotusbrees",
+//     "__v": 0
+//     },
 
 
 export default class Image {
   constructor(data) {
+    // for adding background images to heroes
     this.img = data.img
     this.user = data.user || "grantignotusbrees"
     this.name = data.name
     this.description = data.description || "No description provided."
     this._id = data._id || null
+
+    // for adding djinn images to pokemon
+    this.name = data.name || "djinn"
+    this.img = data.img
+    this.weight = data.weight
+    this.user = data.user || "grantignotusbrees"
+    this._id = data._id || null
+    this.types = data.types
   }
 
 

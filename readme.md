@@ -1,10 +1,6 @@
 
 
-<!-- SECTION My stretch goals
-- Random spell by level  https://www.dnd5eapi.co/docs/#resource-lists
-- D20 Roller http://roll.diceapi.com/
-- Display Djinn animation with button using api/grantignotusbrees/pokemon
-store which one in local storage.
+<!--
 "data": [
     {
         "types": [
@@ -43,105 +39,11 @@ store which one in local storage.
     "weight": "1000",
     "user": "grantignotusbrees",
     "__v": 0
-    },
-- Random image set that I actually like. New image input form
-- Clock api http://worldclockapi.com/
-Sweet alert on page load if there are unfinished todos
--->
-
-<!-- ## Goals
-In this project students will demonstrate their ability to build a more robust application that requires multiple asynchronous calls to retrieve several different pieces of data.
-
-They will demonstrate a proficiency utilizing multiple services and controllers to handle different aspects of data all rendered to the same document. In addition they will be responsible for implementing the observer pattern and utilizing subscribers to best handle the asynchronistic aspects of this challenge. 
+    }, -->
 
 
-## The Setup
 
-### Step 1
-
-This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files and through all the notes and `TODO`s. Remember services are used for getting and maintaining the data integrity. Controllers are for manipulating the DOM.
-
-You will notice that the controllers, services and html structure have been connected and some of them started for you. Be sure you understand what the code that exists is doing. 
-
-Take a look at the weather controller and service for a complete example of getting data from an api and seeing that data in the controller. Also don't forget to instantiate your controllers and add them to the app object in `main.js`.
-
-### Step 2
-
-Your goal will be to put all of the data gathered from the services together in a visually pleasing format as well as ensuring the functionality of a todo list. As you review each of these controllers think about where you are going to put that data on your screen and be sure the HTML is set up to receive it.
-
-*Feel free to use the image above for inspiration.*
-
-The only service that requires more than a `.get` will be your `TodoService`.
-
-Think about the subscriber functions that each controller will need, so the appropriate data can be rendered to the page at the appropriate time.
-
-### Step 3
-
-The todolist is perhaps one of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and the user should be able to toggle an item's status if they don't want to remove the item.
-
-The TodoService & Controller will likely take most of your time. Read carefully the notes that were given to you. Check out the API documentation below for more information on how your todo service will interact with the API.
-
-### Step 4
-
-The positioning of elements on the page is not the absolute most crucial thing for this application however it does need to have few things to make the grade. Use the picture above as an idea for laying out your site. At least one of the features must overlay the image. 
-  
-## The Back-End (API)
-
-In this project you will be expected to communicate with the following endpoints. With the exception of `todos` all of these endpoints will only respond to `GET` requests. `Axios` instances have already been created in each of the corresponding services. It will be up to you to look at the data from these endpoints to determine your `models` for dealing with the data. 
-
-- `baseURL = https://bcw-sandbox.herokuapp.com/api/`
-    - `weather`
-    - `quotes`
-    - `images`
-    - `YOURNAME/todos`
-
-### Todos `(/YOURNAME/todos)`
-
-The todos portion of this project is the largest and will probably take the most amount of time to complete. Your todo list will communicate with the server using the following methods. The server will only respond to valid requests using the appropriate method.
-
-- `HTTP methods`
-    - GET
-    - POST
-    - PUT
-    - DELETE
-
-#### Todo model
-```javascript
-{
-    //the server will create these properties for you
-    _id: {type: String, required: true, unique: true }
-    completed: { type: Boolean, required: true, default: false},
-    user: { type: String, required: true },
-    //You will need to provide a description
-    description: { type: String, required: true},
-}
-```
-
-#### Post Request Method
-- `Create Todo`
-    - /YOURNAME/todos 
-        - new todo object as data for request
-
-#### Get Request Method
-- `Get One Todo`
-    - /YOURNAME/todos/:todoId
-
-#### Get Entire Todo List 
-- `Get All Todos by User`
-    - /YOURNAME/todos
-
-#### Put Request Method
-- `Edit Todo at id`
-    - /YOURNAME/todos/:todoId 
-        - edited todo object as data for request
-
-### Delete Request Method
-- `Delete Todo by id`
-    - /YOURNAME/todos/:todoId  -->
-
----------------------------------
-
-## REQUIREMENTS:
+## REQUIRED:
  ### Visualization
 - The data from the services are each rendered:
   - [ ] Quote: Quote always displayed and Author reveals on hover

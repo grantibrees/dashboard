@@ -18,44 +18,73 @@
 	<title> </title>
 </head>
 
-<body class="cfont-inky-typed bg main-colors">
+<body class="font-inky-typed bg main-colors">
 	<div id="bg-image">
-		<div class="spinner-border font-purple loading-spinner" id="loader" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
+		<div class="spinner-border font-purple loading-spinner" id="loader" role="status"></div>
 
 		<section class="container-fluid">
-
-			<div id="weather">
-				Your Weather Template
-			</div>
-
-			<div id="quote">
-				The Quote
-			</div>
-
-			<div class="card-body bg-transparent card-effects rounded shadow">
-				<div id="todo" class="row d-block">
-					A Todo List
-					<form onsubmit="app.todoController.addTodo(event)">
-						<div class="form-group">
-							<input type="text" name="description" class="form-control form-control-sm" placeholder="..."
-								maxlength="20" required />
-						</div>
-						<div class="d-flex">
-							<button type="submit" class="btn btn-sm btn-outline-dark justify-self-end">Add</button>
-						</div>
-					</form>
+			<div class="row">
+				<div id="weather">
+					Your Weather Template
 				</div>
 			</div>
 
+			<div class="row fixed-bottom align-items-end">
+				<div class="col-4 ">Dice Roller?</div>
+				<div class="col-4 ">
+					<div id="quote">
+						The Quote
+					</div>
+				</div>
+
+
+				<div class="col-4 align-items-center justify-items-end">
+
+					<div id="todo"
+						class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-py rm-px px-3 py-1 ml-auto mr-3">
+						<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
+						<div id="todo-insert" class="mx-2 container-fluid align-items-center justify-content-around">
+							<div class="row pr-3 align-items-center">
+								<input type="checkbox" onclick="app.todoController.removeTodo()" />
+								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item 1 </h5><i
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+							</div>
+							<div class="row pr-3 align-items-center">
+								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Two </h5><i
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+							</div>
+							<div class="row pr-3 align-items-center">
+								<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Three 8uRdfwwHb</h5><i
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+							</div>
+
+						</div>
+						<form onsubmit="app.todoController.addTodo(event)">
+							<div class="form-group">
+								<div class="px-1 py-2 mx-2">
+									<input type="text" name="description" class="form-control form-control-sm"
+										placeholder='Plan Next D&D Session' maxlength="20" required />
+								</div>
+								<div class="d-flex justify-content-end">
+									<button type="submit" id="todo-btn"
+										class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+						</form>
+
+					</div>
+				</div>
+
+			</div>
+
+
+		</section>
+
+	</div>
 
 
 
 
-
-			<!-- For adding Images -->
-			<!-- <div>
+	<!-- For adding Images -->
+	<!-- <div>
 		<form onsubmit="app.imageController.addImage(event)">
 			<div class="form-group">
 				<label for="imageInput">Image URL</label>
@@ -68,21 +97,20 @@
 			<button type="submit" class="btn btn-outline-dark">Submit</button>
 		</form>
 	</div> -->
-		</section>
-		<!-- Scripts -->
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script type="module" src="app/main.js"></script>
-	</div>
+	</section>
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script type="module" src="app/main.js"></script>
 </body>
 
 </html>
