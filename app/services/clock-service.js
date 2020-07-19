@@ -20,7 +20,8 @@ class ClockService {
     setInterval(this.timeIncrementer, 1000)
   }
   timeIncrementer() {
-    store.State.rawTime++
+    let rawT = ++store.State.rawTime
+    store.commit("rawTime", rawT.valueOf())
   }
 
   getTime() {
@@ -35,6 +36,7 @@ class ClockService {
       month: date.getMonth(),
     }
     store.commit("currentTime", new Time(timeData))
+
   }
 
   pullTime() {

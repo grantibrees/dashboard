@@ -51,7 +51,8 @@ let _state = {
   /**@type {number}*/
   rawTime: 0,
   currentTime: [],
-  initialTimePull: []
+  initialTimePull: [],
+  yesterday: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -64,7 +65,8 @@ let _listeners = {
   bgImage: [],
   rawTime: [],
   currentTime: [],
-  initialTimePull: []
+  initialTimePull: [],
+  yesterday: []
 };
 
 /**

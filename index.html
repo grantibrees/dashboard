@@ -28,15 +28,19 @@
 	<div id="bg-image">
 		<!-- <div class="spinner-border font-purple loading-spinner" id="loader" role="status"></div> -->
 
-		<section class="container-fluid">
-			<div class="row">
-				<div id="weather">
-					Your Weather Template
+		<section class="container-fluid align-content-around">
+
+			<div class="row row-height pt-4">
+				<div class="col-10"></div>
+				<div class="col-2">
+					<div id="weather">
+						Your Weather Template
+					</div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-4">
+			<div class="row row-height">
+				<div class="col-3">
 					<!-- For adding Images -->
 					<!-- <div>
 		<form onsubmit="app.imageController.addImage(event)">
@@ -56,78 +60,81 @@
 				</div> -->
 				</div>
 
-				<div class="col-4 text-white">
-					<div id="clock">
-						<div>It is the <span id="date-display"></span></div>
-						<div>at <span id="time-display"></span>.</div>
+				<div class="col-6 d-flex align-items-center justify-content-center text-center font-purple">
+					<div id="clock"
+						class="card-body row d-block bg-transparent card-effects rounded shadow px-3 py-3 align-items-center text-start">
+
+						<div class="h3"><span id="greeting-display"></span>.</div>
+						<div class="h3">It is the <span id="date-display"></span></div>
+						<div class="h3">at <span id="time-display" class="font-lighter"></span>.</div>
+
 					</div>
 
 				</div>
-				<div class="col-4"></div>
+				<div class="col-3"></div>
+			</div>
 
-
-				<div class="row fixed-bottom align-items-end">
-					<div class="col-4">
-						<div class="clicker-hold">
-							<img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" />
-						</div>
+			<div class="row fixed-bottom pb-4">
+				<div class="col-4">
+					<div class="clicker-hold">
+						<img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" />
 					</div>
-					<div class="col-4 ">
-						<div id="quote">
-							The Quote
-						</div>
+				</div>
+				<div class="col-4 ">
+					<div id="quote">
+						The Quote
 					</div>
+				</div>
 
 
-					<div class="col-4 align-items-center justify-items-end">
+				<div class="col-4 align-items-center justify-items-end">
 
-						<div id="todo"
-							class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-py rm-px px-3 py-1 ml-auto mr-3">
-							<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
-							<div id="todo-insert" class="font-purple mx-2 container-fluid align-items-center justify-content-around">
-								<div class="row pr-3 align-items-center">
-									<div class="">
-										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
-									</div>
-									<h5 class="todo-done col-9 rm-my py-1 pl-3">${itemInput}</h5><i
-										onclick="app.todoController.deleteTodo"
-										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+					<div id="todo"
+						class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-pt rm-px px-3 py-1 ml-auto mr-3">
+						<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
+						<div id="todo-insert" class="font-purple mx-2 container-fluid align-items-center justify-content-around">
+							<div class="row pr-3 align-items-center">
+								<div class="">
+									<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
 								</div>
-								<div class="row pr-3 align-items-center">
-									<div class="">
-										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
-									</div>
-									<h5 class="col-9 rm-my py-1 pl-3"> Item Two </h5><i
-										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
-								</div>
-								<div class="row pr-3 align-items-center">
-									<div class="">
-										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
-									</div>
-									<h5 class="col-9 rm-my py-1 pl-3">Plan Next D&D Session</h5><i
-										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
-								</div>
-
+								<h5 class="todo-done col-9 rm-my py-1 pl-3">${itemInput}</h5><i onclick="app.todoController.deleteTodo"
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
 							</div>
-							<form onsubmit="app.todoController.addTodo(event)">
-								<div class="form-group">
-									<div class="row d-flex py-3 px-4 justify-content-around">
-										<div class="align-items-center flex-grow-1">
-											<input type="text" name="description" class="form-control form-control-sm"
-												placeholder='Plan Next D&D Session' maxlength="24" required />
-										</div>
-										<div class="align-items-center ">
-											<button type="submit" id="todo-btn"
-												class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
-										</div>
-									</div>
+							<div class="row pr-3 align-items-center">
+								<div class="">
+									<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
 								</div>
-							</form>
+								<h5 class="col-9 rm-my py-1 pl-3"> Item Two </h5><i
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+							</div>
+							<div class="row pr-3 align-items-center">
+								<div class="">
+									<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
+								</div>
+								<h5 class="col-9 rm-my py-1 pl-3">Plan Next D&D Session</h5><i
+									class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
+							</div>
 
 						</div>
-					</div>
+						<form onsubmit="app.todoController.addTodo(event)">
+							<div class="form-group">
+								<div class="row d-flex py-3 px-4 justify-content-around">
+									<div class="align-items-center flex-grow-1">
+										<input type="text" name="description" class="form-control form-control-sm"
+											placeholder='Plan Next D&D Session' maxlength="24" required />
+									</div>
+									<div class="align-items-center ">
+										<button type="submit" id="todo-btn"
+											class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+									</div>
+								</div>
+							</div>
+						</form>
 
+					</div>
 				</div>
+
+			</div>
 
 
 		</section>
@@ -138,7 +145,7 @@
 
 
 
-	</section>
+
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

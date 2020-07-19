@@ -6,7 +6,7 @@
   --black: black;
   --darkpurple: #270152;
   --purple: #450391;
-  --purplegrey: #6a5c77;
+  --purplegrey: #3f3149;
   --lightpurple: #a676ff;
   --lightgrey: #cccccc !important;
   --grey: #868686;
@@ -35,6 +35,14 @@ body{
   z-index: -4;
 }
 
+.row-spacer{
+  min-height: 3vh;
+}
+
+.row-height{
+  min-height: 24vh;
+}
+
 .main-colors{
   background-color: var(--verylightgrey);
   color: var(--verydarkgrey);
@@ -57,7 +65,7 @@ body{
 }
 
 .card-effects{
-  background:rgba(240, 240, 240, 0.363) !important;
+  background:rgba(255, 255, 255, 0.205) !important;
   backdrop-filter: blur(3px) !important;
   max-width: 300px;
   min-width: 240px;
@@ -126,6 +134,10 @@ color: var(--darkpurple);
 .font-gold{
 color: var(--gold);
 }
+.font-lighter{
+  color: var(--lightgold);
+  text-shadow: 2px 2px 4px #000000de;
+  }
 
 .font-teal{
 color: var(--darkteal);
@@ -229,6 +241,9 @@ font-family: 'Yatra One', cursive;
   .rm-py{
     padding-top: 0em !important;
     padding-bottom: 0em !important;
+  }
+  .rm-pt{
+    padding-top: 0em !important;
   }
   
   .rm-px{

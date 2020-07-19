@@ -7,7 +7,7 @@ export default class Time {
     this.weekday = data.weekday
     this.month = data.month
 
-    if (this.minute >= 33 && this.minute < 60) {
+    if (this.minute >= 33) {
       this.hour++
     }
 
@@ -15,18 +15,19 @@ export default class Time {
   }
 
   get TimeString() {
-    let hourstring = (this.hour == 0 || this.hour == 12) ? "twelve" : (this.hour == 1 || this.hour == 13) ? "one" : (this.hour == 2 || this.hour == 13) ? "two" : (this.hour == 3 || this.hour == 15) ? "three" : (this.hour == 4 || this.hour == 16) ? "four" : (this.hour == 5 || this.hour == 17) ? "five" : (this.hour == 6 || this.hour == 18) ? "six" : (this.hour == 7 || this.hour == 19) ? "seven" : (this.hour == 8 || this.hour == 20) ? "eight" : (this.hour == 9 || this.hour == 21) ? "nine" : (this.hour == 10 || this.hour == 22) ? "ten" : "eleven"
+    let hourstring = (this.hour == 0 || this.hour == 12) ? "twelve" : (this.hour == 1 || this.hour == 13) ? "one" : (this.hour == 2 || this.hour == 14) ? "two" : (this.hour == 3 || this.hour == 15) ? "three" : (this.hour == 4 || this.hour == 16) ? "four" : (this.hour == 5 || this.hour == 17) ? "five" : (this.hour == 6 || this.hour == 18) ? "six" : (this.hour == 7 || this.hour == 19) ? "seven" : (this.hour == 8 || this.hour == 20) ? "eight" : (this.hour == 9 || this.hour == 21) ? "nine" : (this.hour == 10 || this.hour == 22) ? "ten" : (this.hour == 11 || this.hour == 23) ? "eleven" : "who knows when"
+
     let hourname = hourstring /*a string */
     let min = this.minute /*a number */
     function softizer() {
       if (min < 3) {
-        return hourname
+        return hourname + " o'clock"
       } else if (min >= 3 && min < 8) {
         return "five past " + hourname
       } else if (min >= 8 && min < 13) {
         return "ten past " + hourname
       } else if (min >= 13 && min < 18) {
-        return "fifteen past " + hourname
+        return "a quarter past " + hourname
       } else if (min >= 18 && min < 23) {
         return "twenty past " + hourname
       } else if (min >= 23 && min < 28) {
@@ -38,13 +39,13 @@ export default class Time {
       } else if (min >= 38 && min < 43) {
         return "twenty to " + hourname
       } else if (min >= 43 && min < 48) {
-        return "fifteen to " + hourname
+        return "a quarter to " + hourname
       } else if (min >= 48 && min < 53) {
-        return "ten to " + hourname
+        return "ten til " + hourname
       } else if (min >= 53 && min < 57) {
-        return "five to " + hourname
+        return "five til " + hourname
       } else if (min >= 57) {
-        return hourname
+        return hourname + " o'clock"
       }
     }
     let timeString = softizer()
@@ -66,6 +67,11 @@ export default class Time {
     let fullString = this.day + dayEnd + " of " + monthString
 
     return fullString
+  }
+
+  get Greeting() {
+    let textGreeting = (this.hour >= 5 && this.hour < 12) ? "Good morning" : (this.hour >= 12 && this.hour < 17) ? "Pleasant afternoon" : (this.hour >= 17 && this.hour < 21) ? "Lovely eventide" : (this.hour >= 21 || this.hour < 2) ? "Good evening" : "My, you're up late"
+    return textGreeting
   }
 }
 

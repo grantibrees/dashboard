@@ -6,10 +6,10 @@
   - [x] Image: The image is required, however the additional data is optional
   - [ ] Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
   - [ ] Todo: Todo's are shown on the page including a count of remaining tasks to complete
-- [ ] The image should be on large display with at least one other element positioned over the top of the image.
+- [x] The image should be on large display with at least one other element positioned over the top of the image.
 - [ ] When adding a Todo the page does not reload
 - [ ] Completed Todo's checkbox remains checked on reload ([hint: checked attribute](https://www.w3schools.com/tags/att_input_checked.asp))
-- [ ] A clock shows the accurate time in the middle of the screen and updates appropriately
+- [x] A clock shows the accurate time in the middle of the screen and updates appropriately
    
  ### Functionality
  - [ ] Todo's can be added to a list (POST)
@@ -26,13 +26,13 @@
     - [ ] D20 Roller http://roll.diceapi.com/
     - [ ] Display Djinn animation (local storage).
     - [ ] Display form to add/remove images from api/user/heroes
-- [ ] Clock api http://worldclockapi.com/
+- [x] Clock api http://worldclockapi.com/
 - [ ] Sweet alert on page load if there are unfinished todos
 
-- On hover the quote should show the author of the quote and disappear when not hovered over
+- [ ] On hover the quote should show the author of the quote and disappear when not hovered over
     (I'll change this to clicking open the random spell name to show the spell description)
-- Change the message from Good Morning to Good Afternoon, Evening as appropriate.
-- Include an Icon to show what the weather is sunny/cloudy/rainy
+- [x] Change the message from Good Morning to Good Afternoon, Evening as appropriate.
+- [ ] Include an Icon to show what the weather is sunny/cloudy/rainy
 - [ ] Add a button to cycle spells/djinn
 
 - `BONUS DIFFICULTY` The todo list shouldn't have to redraw every item just because one of them changed. 
