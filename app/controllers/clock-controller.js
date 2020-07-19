@@ -1,37 +1,25 @@
-import _imageService from "../services/image-service.js";
+import _clockService from "../services/clock-service.js";
 import _store from "../store.js";
+import Time from "../models/time.js"
 
 //TODO Create methods for constructor, and rendering the image to the page
 //      (you may wish to set it as a background image)
 
-function _drawTime() {
-  console.log("_drawImage ran");
-  console.log(_store.State.bgImage);
-  document.body.style.backgroundImage = `url(${_store.State.bgImage})`
-  document.getElementById("bg-image").classList.add("bg-overlay")
-  setTimeout(function () { document.getElementById("loader").classList.add("hidden") }, 1200);
-}
 
-export default class ImageController {
+
+export default class ClockController {
   constructor() {
-    console.log("_drawImage subscribed to bgImage");
-    _store.subscribe("current", _drawTime)
-
-  }
-  addImage(event) {
-    event.preventDefault()
-    let formData = event.target
-    let rawImageData = {
-      img: formData.url.value,
-      name: formData.name.value,
-      description: formData.desc.value,
-      user: "grantignotusbrees"
-    }
-    _imageService.addImage(rawImageData)
-    formData.reset()
+    _store.subscribe("currentTime", this.drawTime)
+    _store.subscribe("initialTimePull", this.drawDate)
   }
 
-  addDjinn() {
-    _imageService.addDjinn()
+  drawTime() {
+
+    document.getElementById("time-display").innerText = _store.State.currentTime.TimeString
   }
+  drawDate() {
+    console.log("drawDate attempted");
+    document.getElementById("date-display").innerText = _store.State.currentTime.Date
+  }
+
 }

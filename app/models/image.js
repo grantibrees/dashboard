@@ -1,3 +1,28 @@
+
+export default class Image {
+  constructor(data) {
+    // for adding background images to heroes
+    this.img = data.img
+    this.user = data.user || "grantignotusbrees"
+    this.name = data.name
+    this.description = data.description || "No description provided."
+    this._id = data._id || null
+
+    // // for adding djinn images to pokemon
+    // this.name = data.name || "djinn"
+    // this.img = data.img
+    // this.weight = data.weight
+    // this.user = data.user || "grantignotusbrees"
+    // this._id = data._id || null
+    // this.types = data.types
+  }
+
+
+}
+
+
+// SECTION Reference data
+
 // https://cdna.artstation.com/p/assets/images/images/024/632/818/4k/anato-finnstark-dd39wjm-a37c3129-20f3-4efc-9141-314e68f517f6.jpg
 // https://cdna.artstation.com/p/assets/images/images/024/515/480/4k/anato-finnstark-webpti.jpg
 // https://cdnb.artstation.com/p/assets/images/images/022/731/741/4k/anato-finnstark-web-petit.jpg
@@ -86,25 +111,3 @@
 //     "user": "grantignotusbrees",
 //     "__v": 0
 //     },
-
-
-export default class Image {
-  constructor(data) {
-    // for adding background images to heroes
-    this.img = data.img
-    this.user = data.user || "grantignotusbrees"
-    this.name = data.name
-    this.description = data.description || "No description provided."
-    this._id = data._id || null
-
-    // // for adding djinn images to pokemon
-    // this.name = data.name || "djinn"
-    // this.img = data.img
-    // this.weight = data.weight
-    // this.user = data.user || "grantignotusbrees"
-    // this._id = data._id || null
-    // this.types = data.types
-  }
-
-
-}

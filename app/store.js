@@ -1,5 +1,5 @@
 import Weather from "./models/weather.js";
-import Image from "./models/image.js";
+import Time from "./models/time.js"
 
 let _djinnStorage = {
   tempObj: [{
@@ -45,13 +45,13 @@ let _state = {
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
   /**@type {any[]}*/
   todos: [], //TODO change 'any' to your todo model
-
   tempImage: [],
   allImages: [],
   bgImage: [],
-  rawTime: [],
-  timeData: [],
-  currentTime: []
+  /**@type {number}*/
+  rawTime: 0,
+  currentTime: [],
+  initialTimePull: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -62,8 +62,9 @@ let _listeners = {
   tempImage: [],
   allImages: [],
   bgImage: [],
-  timeData: [],
-  currentTime: []
+  rawTime: [],
+  currentTime: [],
+  initialTimePull: []
 };
 
 /**
