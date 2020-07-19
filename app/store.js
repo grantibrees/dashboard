@@ -49,6 +49,9 @@ let _state = {
   tempImage: [],
   allImages: [],
   bgImage: [],
+  rawTime: [],
+  timeData: [],
+  currentTime: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -58,7 +61,9 @@ let _listeners = {
   weather: [],
   tempImage: [],
   allImages: [],
-  bgImage: []
+  bgImage: [],
+  timeData: [],
+  currentTime: []
 };
 
 /**

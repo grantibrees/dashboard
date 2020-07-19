@@ -6,6 +6,7 @@
   --black: black;
   --darkpurple: #270152;
   --purple: #450391;
+  --purplegrey: #6a5c77;
   --lightpurple: #a676ff;
   --lightgrey: #cccccc !important;
   --grey: #868686;
@@ -18,6 +19,8 @@
   --softpink: #cf8fdb;
   --royalblue: #1027f0;
   --red: #9c1700;
+  --darkred: #5c0e00;
+  --lightred: #c4382e;
 }
 
 #todo-error{
@@ -54,10 +57,10 @@ body{
 }
 
 .card-effects{
-  background:rgba(233, 233, 233, 0.425) !important;
+  background:rgba(240, 240, 240, 0.363) !important;
   backdrop-filter: blur(3px) !important;
-  max-width: 250px;
-  min-width: 180px;
+  max-width: 300px;
+  min-width: 240px;
 }
 
 .loading-spinner{
@@ -66,15 +69,33 @@ body{
   right: 46%;
 }
 
+.delete-color{
+  color: var(--red);
+}
+.delete-color:hover{
+  color: var(--lightred);
+  cursor: pointer;
+}
 
+.todo-done{
+  text-decoration: line-through;
+  color: var(--purplegrey)
+}
+
+.clicker-hold{
+  height: 1.5em !important;
+  width: 1.5em !important;
+}
 .clicker{
   height: 1.5em !important;
   width: 1.5em !important;
-  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  display: none;
 }
-.clicker:hover{
-  transition: all .2s linear !important;
-  box-shadow: 0em 0em 4px 1px #f0b23eb7;
+.clicker-hold:hover + .clicker, .clicker:hover {
+  /* transition: all .2s linear !important; */
+  display: inline-block;
+  cursor: pointer;
 }
 .clicker:active{
   border: 2px solid #ffffff00;
@@ -82,7 +103,7 @@ body{
 }
 
 .ra-sm {
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 
@@ -114,9 +135,7 @@ color: var(--darkteal);
 color: var(--white);
 }
 
-.delete-color{
-  color: var(--darkgold)
-}
+
 
 .font-simple-serif{
 font-family: 'Amiri', serif;

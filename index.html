@@ -16,6 +16,12 @@
 		class="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title> </title>
+
+	<style>
+		* {
+			outline: 1px solid #00ff4c;
+		}
+	</style>
 </head>
 
 <body class="font-inky-typed bg main-colors">
@@ -51,13 +57,16 @@
 				</div>
 
 				<div class="col-4">
+					<div id="clock">It is </div>
 				</div>
 				<div class="col-4"></div>
 
 
 				<div class="row fixed-bottom align-items-end">
 					<div class="col-4">
-						<img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" />
+						<div class="clicker-hold">
+							<img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" />
+						</div>
 					</div>
 					<div class="col-4 ">
 						<div id="quote">
@@ -71,33 +80,44 @@
 						<div id="todo"
 							class="card-body row d-block bg-transparent card-effects rounded shadow rm-mx rm-py rm-px px-3 py-1 ml-auto mr-3">
 							<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
-							<div id="todo-insert" class="mx-2 container-fluid align-items-center justify-content-around">
+							<div id="todo-insert" class="font-purple mx-2 container-fluid align-items-center justify-content-around">
 								<div class="row pr-3 align-items-center">
 									<div class="">
 										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
 									</div>
-									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item 1 </h5><i
+									<h5 class="todo-done col-9 rm-my py-1 pl-3">${itemInput}</h5><i
+										onclick="app.todoController.deleteTodo"
 										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
 								</div>
 								<div class="row pr-3 align-items-center">
-									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Two </h5><i
+									<div class="">
+										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
+									</div>
+									<h5 class="col-9 rm-my py-1 pl-3"> Item Two </h5><i
 										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
 								</div>
 								<div class="row pr-3 align-items-center">
-									<h5 class="col-9 font-inky-typed rm-my py-1 pl-3"> Item Three 8uRdfwwHb</h5><i
+									<div class="">
+										<input type="checkbox" id="myCheck" class="" onclick="app.todoController.crossTodo(todoId)">
+									</div>
+									<h5 class="col-9 rm-my py-1 pl-3">Plan Next D&D Session</h5><i
 										class="col-2 ra ra-x-mark ra-sm align-self-center delete-color"></i>
 								</div>
 
 							</div>
 							<form onsubmit="app.todoController.addTodo(event)">
 								<div class="form-group">
-									<div class="px-1 py-2 mx-2">
-										<input type="text" name="description" class="form-control form-control-sm"
-											placeholder='Plan Next D&D Session' maxlength="20" required />
+									<div class="row d-flex py-3 px-4 justify-content-around">
+										<div class="align-items-center flex-grow-1">
+											<input type="text" name="description" class="form-control form-control-sm"
+												placeholder='Plan Next D&D Session' maxlength="24" required />
+										</div>
+										<div class="align-items-center ">
+											<button type="submit" id="todo-btn"
+												class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+										</div>
 									</div>
-									<div class="d-flex justify-content-end">
-										<button type="submit" id="todo-btn"
-											class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+								</div>
 							</form>
 
 						</div>
