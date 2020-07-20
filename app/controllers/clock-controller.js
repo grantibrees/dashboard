@@ -14,11 +14,14 @@ export default class ClockController {
   }
 
   drawTime() {
+    // @ts-ignore
     document.getElementById("time-display").innerText = _store.State.currentTime.TimeString
   }
   drawDate() {
-    console.log("drawDate attempted");
+    console.log("drawDate ran");
+    // @ts-ignore
     document.getElementById("date-display").innerText = _store.State.currentTime.Date
+    // @ts-ignore
     document.getElementById("greeting-display").innerText = _store.State.currentTime.Greeting
   }
 

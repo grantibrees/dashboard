@@ -30,11 +30,9 @@ class ImageService {
   }
 
   addImage(ImageData) {
-    console.log(ImageData);
     let image = new Image(ImageData)
     store.commit("tempImage", image)
     imgApi2.post("heroes/", store.State.tempImage).then(res => {
-      console.log(res.data);
 
     }).catch(err => console.error(err))
   }
@@ -47,7 +45,6 @@ class ImageService {
 
   pullImage() {
     imgApi2.get("heroes").then(res => {
-      console.log(res);
       store.commit("allImages", res.data.data.map(rawImageData => rawImageData.img))
     }).catch(err => console.error(err))
   }

@@ -33,7 +33,7 @@ export default class Time {
       } else if (min >= 23 && min < 28) {
         return "twenty-five past " + hourname
       } else if (min >= 28 && min < 33) {
-        return "half past" + hourname
+        return "half past " + hourname
       } else if (min >= 33 && min < 38) {
         return "twenty-five to " + hourname
       } else if (min >= 38 && min < 43) {
@@ -70,7 +70,7 @@ export default class Time {
   }
 
   get Greeting() {
-    let textGreeting = (this.hour >= 5 && this.hour < 12) ? "Good morning" : (this.hour >= 12 && this.hour < 17) ? "Pleasant afternoon" : (this.hour >= 17 && this.hour < 21) ? "Lovely eventide" : (this.hour >= 21 || this.hour < 2) ? "Good evening" : "My, you're up late"
+    let textGreeting = (this.hour >= 5 && this.hour < 12) ? "Good morning" : (this.hour >= 12 && this.hour < 17) ? "Pleasant afternoon" : (this.hour >= 17 && this.hour < 22) ? "Lovely eventide" : (this.hour >= 22 || this.hour < 2) ? "Good evening" : "My, you're up late"
     return textGreeting
   }
 }

@@ -1,5 +1,6 @@
 import Weather from "./models/weather.js";
 import Time from "./models/time.js"
+import Todo from "./models/todo.js"
 
 let _djinnStorage = {
   tempObj: [{
@@ -43,16 +44,25 @@ let _djinnStorage = {
 let _state = {
   /**@type {Weather} */
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
-  /**@type {any[]}*/
-  todos: [], //TODO change 'any' to your todo model
+  /**@type {Todo[]}*/
+  todos: [],
+  /**@type {Todo[]}*/
+  recentTodo: [],
+  /**@type {Todo[]}*/
+  deleteTodoTarget: [],
+  /**@type {Todo[]}*/
+  newTodo: [],
+  /**@type {Todo[]}*/
+  initialTodoPull: [],
   tempImage: [],
   allImages: [],
   bgImage: [],
   /**@type {number}*/
   rawTime: 0,
+  /**@type {Time[]}*/
   currentTime: [],
   initialTimePull: [],
-  yesterday: []
+  dayComparer: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -60,13 +70,18 @@ let _state = {
  */
 let _listeners = {
   weather: [],
+  todos: [],
+  recentTodo: [],
+  deleteTodoTarget: [],
+  newTodo: [],
+  initialTodoPull: [],
   tempImage: [],
   allImages: [],
   bgImage: [],
   rawTime: [],
   currentTime: [],
   initialTimePull: [],
-  yesterday: []
+  dayComparer: []
 };
 
 /**

@@ -4,9 +4,9 @@
   --lightteal: #31dbc5;
   --white: #ffffff;
   --black: black;
-  --darkpurple: #270152;
+  --darkpurple: #1d003d;
   --purple: #450391;
-  --purplegrey: #3f3149;
+  --purplegrey: #4b375c;
   --lightpurple: #a676ff;
   --lightgrey: #cccccc !important;
   --grey: #868686;
@@ -21,16 +21,15 @@
   --red: #9c1700;
   --darkred: #5c0e00;
   --lightred: #c4382e;
+  --seethru: #313131;
+  --greythru: #6d6d6d;
 }
 
-#todo-error{
-  color: var(--red);
-  font-size: 2em;
-}
 html{
   height: 100%;
 }
-body{
+
+body {
   height: 100%;
   z-index: -4;
 }
@@ -40,7 +39,7 @@ body{
 }
 
 .row-height{
-  min-height: 24vh;
+  min-height: 29vh;
 }
 
 .main-colors{
@@ -65,10 +64,15 @@ body{
 }
 
 .card-effects{
-  background:rgba(255, 255, 255, 0.205) !important;
-  backdrop-filter: blur(3px) !important;
+  background:rgba(255, 255, 255, 0.37) !important;
+  backdrop-filter: blur(4px) !important;
+}
+.card-effects.tada{
   max-width: 300px;
   min-width: 240px;
+  min-height: 210px;
+  max-height: 35vh;
+
 }
 
 .loading-spinner{
@@ -78,11 +82,14 @@ body{
 }
 
 .delete-color{
-  color: var(--red);
+  color: var(--darkgold);
 }
 .delete-color:hover{
-  color: var(--lightred);
+  color: var(--gold);
   cursor: pointer;
+}
+.delete-color:active{
+  border: 2px solid #ffffff00;
 }
 
 .todo-done{
@@ -113,7 +120,16 @@ body{
 .ra-sm {
   font-size: 0.6em;
 }
-
+.custom-font-size {
+  font-size: 1.15em;
+}
+.custom-overflow {
+  width: 100%;
+  max-height: 20vh;
+  overflow-y: auto;
+  box-shadow: inset 1px 1px 7px #181818e7;
+  
+}
 
 .font-purple{
 color: var(--darkpurple);
@@ -136,7 +152,7 @@ color: var(--gold);
 }
 .font-lighter{
   color: var(--lightgold);
-  text-shadow: 2px 2px 4px #000000de;
+  text-shadow: 2px 2px 4px #202020cb;
   }
 
 .font-teal{
@@ -249,6 +265,9 @@ font-family: 'Yatra One', cursive;
   .rm-px{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .rm-pr{
+    padding-right: 0em;
   }
 
   .hidden{
