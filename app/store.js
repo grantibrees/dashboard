@@ -1,6 +1,7 @@
 import Weather from "./models/weather.js";
 import Time from "./models/time.js"
 import Todo from "./models/todo.js"
+import Quote from "./models/Quote.js"
 
 let _djinnStorage = {
   tempObj: [{
@@ -41,9 +42,11 @@ let _djinnStorage = {
   }]
 }
 
+// new Weather({ name: "loading", main: { temp: 0.0 } }) //temporary fake data
+
 let _state = {
-  /**@type {Weather} */
-  weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
+  /**@type {Weather[]} */
+  weather: [],
   /**@type {Todo[]}*/
   todos: [],
   /**@type {Todo[]}*/
@@ -62,7 +65,9 @@ let _state = {
   /**@type {Time[]}*/
   currentTime: [],
   initialTimePull: [],
-  dayComparer: []
+  dayComparer: [],
+  /**@type {Quote[]}*/
+  quote: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -81,7 +86,8 @@ let _listeners = {
   rawTime: [],
   currentTime: [],
   initialTimePull: [],
-  dayComparer: []
+  dayComparer: [],
+  quote: []
 };
 
 /**

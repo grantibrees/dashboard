@@ -15,7 +15,7 @@ export default class Time {
   }
 
   get TimeString() {
-    let hourstring = (this.hour == 0 || this.hour == 12) ? "twelve" : (this.hour == 1 || this.hour == 13) ? "one" : (this.hour == 2 || this.hour == 14) ? "two" : (this.hour == 3 || this.hour == 15) ? "three" : (this.hour == 4 || this.hour == 16) ? "four" : (this.hour == 5 || this.hour == 17) ? "five" : (this.hour == 6 || this.hour == 18) ? "six" : (this.hour == 7 || this.hour == 19) ? "seven" : (this.hour == 8 || this.hour == 20) ? "eight" : (this.hour == 9 || this.hour == 21) ? "nine" : (this.hour == 10 || this.hour == 22) ? "ten" : (this.hour == 11 || this.hour == 23) ? "eleven" : "who knows when"
+    let hourstring = (this.hour == 24 || this.hour == 0 || this.hour == 12) ? "twelve" : (this.hour == 1 || this.hour == 13) ? "one" : (this.hour == 2 || this.hour == 14) ? "two" : (this.hour == 3 || this.hour == 15) ? "three" : (this.hour == 4 || this.hour == 16) ? "four" : (this.hour == 5 || this.hour == 17) ? "five" : (this.hour == 6 || this.hour == 18) ? "six" : (this.hour == 7 || this.hour == 19) ? "seven" : (this.hour == 8 || this.hour == 20) ? "eight" : (this.hour == 9 || this.hour == 21) ? "nine" : (this.hour == 10 || this.hour == 22) ? "ten" : (this.hour == 11 || this.hour == 23) ? "eleven" : "who knows when"
 
     let hourname = hourstring /*a string */
     let min = this.minute /*a number */

@@ -42,7 +42,6 @@ class TodoService {
   addTodoAsync(todo) {
     todoApi.post("/", new Todo(todo)).then(res => {
       console.log(res);
-      debugger
       store.commit("newTodo", new Todo(res.data.data))
     }).catch(err => console.error(err))
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
@@ -71,10 +70,32 @@ class TodoService {
     }).catch(err => console.error(err))
   }
 
+  resolveAfter2Seconds(x) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(x);
+      }, 2000);
+    });
+  }
+
+  async yesterWait() {
+    var x = await this.resolveAfter2Seconds(10);
+    console.log(x); // 10
+  }
+
+
   todoFromYesterday() {
     // Look at todos after API pulls.
+    if (store.State.todos.length == 0) {
+      this.yesterWait()
+    }
     if (store.State.todos.length > 0) {
-      let check = store.State.todos.filter(i => i.completed == true)
+      let filtered = store.State.todos.filter(i => i.completed == true)
+      for (let i = 0; i < filtered.length; i++) {
+        this.removeTodoAsync(filtered[i]._id)
+      }
+      let filterOut = store.State.todos.filter(i => i.completed != true)
+      store.commit("todos", filterOut)
       let todoCount = store.State.todos.length
       if (todoCount > 0) {
         Toast.fire({

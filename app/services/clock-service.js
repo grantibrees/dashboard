@@ -15,7 +15,7 @@ class ClockService {
   constructor() {
     this.pullTime()
     store.subscribe("rawTime", this.getTime)
-    store.subscribe("initialTodoPull", this.todoFromYesterday)
+    store.subscribe("initialTimePull", this.todoFromYesterday)
   }
 
   timeInitializer() {
@@ -53,16 +53,18 @@ class ClockService {
 
   todoFromYesterday() {
     let time = store.State.currentTime
-    let compare = store.State.dayComparer
-    let localHolder = window.localStorage.getItem("dayCompare")
+    let compare = parseInt(window.localStorage.getItem("dayComparer"))
     // @ts-ignore
-    if (compare != time.day || compare.toString() != localHolder) {
+    if (compare == time.day) {
+    } else {
       store.commit("dayComparer", new Time(time).day)
       // @ts-ignore
-      window.localStorage.setItem("dayCompare", time.day)
+      window.localStorage.setItem("dayComparer", time.day)
       TodoService.todoFromYesterday()
     }
+
   }
+
 
 }
 
