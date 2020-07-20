@@ -4,7 +4,7 @@ import store from "../store.js"
 
 // @ts-ignore
 const _quoteApi = axios.create({
-  baseURL: "//quotes.stormconsultancy.co.uk/random.json",
+  baseURL: "http://quotes.stormconsultancy.co.uk/random.json",
   timeout: 3000
 });
 
