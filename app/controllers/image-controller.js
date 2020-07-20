@@ -8,7 +8,7 @@ function _drawImage() {
   console.log("_drawImage ran");
   document.body.style.backgroundImage = `url(${_store.State.bgImage})`
   document.getElementById("bg-image").classList.add("bg-overlay")
-  // setTimeout(function () { document.getElementById("loader").classList.add("hidden") }, 1200);
+  setTimeout(function () { document.getElementById("loader").classList.add("hidden") }, 1200);
 }
 
 export default class ImageController {
