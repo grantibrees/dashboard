@@ -1,4 +1,3 @@
-
 export default class Quote {
   constructor(data) {
     console.log(data);

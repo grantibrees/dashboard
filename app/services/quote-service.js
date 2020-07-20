@@ -1,5 +1,6 @@
-import store from "../store.js"
+
 import Quote from "../models/quote.js"
+import store from "../store.js"
 
 // @ts-ignore
 const _quoteApi = axios.create({
