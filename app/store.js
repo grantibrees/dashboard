@@ -1,7 +1,7 @@
 import Weather from "./models/weather.js";
 import Time from "./models/time.js"
 import Todo from "./models/todo.js"
-import Quote from "./models/Quote.js"
+import Quote from "./models/quote.js"
 
 let _djinnStorage = {
   tempObj: [{
