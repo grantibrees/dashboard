@@ -34,6 +34,17 @@ body {
   z-index: -4;
 }
 
+
+#load-shade{
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  background-color: black;
+  transition-delay: 600ms;
+  transition: all 400ms ease;
+}
+
 .row-spacer{
   min-height: 3vh;
 }

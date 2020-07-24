@@ -24,27 +24,29 @@
 </head>
 
 <body class="font-inky-typed bg main-colors">
-	<div id="bg-image">
-		<!-- TODO add this back for load spinner <div class="spinner-border font-purple loading-spinner" id="loader"
+	<div id="load-shade">
+		<div id="bg-image">
+
+			<!-- TODO add this back for load spinner <div class="spinner-border font-purple loading-spinner" id="loader"
 			role="status"></div> -->
 
-		<section class="container-fluid align-content-around">
+			<section class="container-fluid align-content-around">
 
-			<!-- ANCHOR Top row. Weather. -->
-			<div class="row row-height pt-4">
-				<div class="col-9"></div>
-				<div class="col-3">
-					<div id="weather-draw" class="row font-white d-flex justify-content-end text-end">
+				<!-- ANCHOR Top row. Weather. -->
+				<div class="row row-height pt-4">
+					<div class="col-9"></div>
+					<div class="col-3">
+						<div id="weather-draw" class="row font-white d-flex justify-content-end text-end">
 
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- ANCHOR Middle row. Time. -->
-			<div class="row row-height">
-				<div class="col-3">
-					<!-- For adding Images -->
-					<!-- <div>
+				<!-- ANCHOR Middle row. Time. -->
+				<div class="row row-height">
+					<div class="col-3">
+						<!-- For adding Images -->
+						<!-- <div>
 		<form onsubmit="app.imageController.addImage(event)">
 			<div class="form-group">
 				<label for="imageInput">Image URL</label>
@@ -57,77 +59,79 @@
 			<button type="submit" class="btn btn-outline-dark">Submit</button>
 		</form>
 	</div> -->
-					<!-- <button type="button" onclick="app.imageController.addDjinn()" class="btn btn-outline-dark">Dark</button>
+						<!-- <button type="button" onclick="app.imageController.addDjinn()" class="btn btn-outline-dark">Dark</button>
 
 				</div> -->
-				</div>
-
-				<div class="col-6 d-flex align-items-center justify-content-center font-purple">
-					<div id="clock"
-						class="card d-block bg-transparent card-effects rounded shadow px-4 py-3 align-content-center align-items-center">
-						<div class="h3 mt-2"><span id="greeting-display"></span>.</div>
-						<div class="h3">It is the <span id="date-display"></span></div>
-						<div class="h3 mb-2">at <span id="time-display" class="font-lighter"></span>.</div>
 					</div>
-				</div>
-				<div class="col-3"></div>
-			</div>
 
-			<!-- ANCHOR Bottom row. Buttons, Quotes, Todos. -->
-			<div class="row fixed-bottom pb-4">
-				<!-- SECTION Buttons - d20 rollers, Djinn pop up/cycler, image form show -->
-				<div class="col-4">
-					<div class="clicker-hold">
-						<!-- <img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" /> -->
-					</div>
-				</div>
-				<!-- SECTION Quotes - quotes or a spell pulller -->
-				<div class="col-4 d-flex align-items-end justify-content-center font-white pb-4">
-					<div class="row">
-						<div id="quote" class="col-12 text-center py-2 px-2">
-
-						</div>
-						<div id="author" class="col-12 text-right align-self-end py-2 px-2">
-
+					<div class="col-6 d-flex align-items-center justify-content-center font-purple">
+						<div id="clock"
+							class="card d-block bg-transparent card-effects rounded shadow px-4 py-3 align-content-center align-items-center">
+							<div class="h3 mt-2"><span id="greeting-display"></span>.</div>
+							<div class="h3">It is the <span id="date-display"></span></div>
+							<div class="h3 mb-2">at <span id="time-display" class="font-lighter"></span>.</div>
 						</div>
 					</div>
+					<div class="col-3"></div>
 				</div>
 
-				<!-- SECTION Todos -->
-				<div class="col-4 align-items-center justify-items-end">
-
-					<div id="todo"
-						class="d-block bg-transparent card-effects tada rounded shadow rm-mx rm-pt rm-px px-4 ml-auto mr-3">
-						<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
-						<div id="todo-insert" class="row rm-mx font-purple d-flex justify-content-around custom-overflow rounded">
+				<!-- ANCHOR Bottom row. Buttons, Quotes, Todos. -->
+				<div class="row fixed-bottom pb-4">
+					<!-- SECTION Buttons - d20 rollers, Djinn pop up/cycler, image form show -->
+					<div class="col-4">
+						<div class="clicker-hold">
+							<!-- <img src="/assets/images/Fight.gif" type="button" onclick="app.diceController.roll()" class="clicker" /> -->
 						</div>
+					</div>
+					<!-- SECTION Quotes - quotes or a spell pulller -->
+					<div class="col-4 d-flex align-items-end justify-content-center font-white pb-4">
+						<div class="row">
+							<div id="quote" class="col-12 text-center py-2 px-2">
 
-						<!-- SECTION Form submit -->
-						<div class="">
-							<form onsubmit="app.todoController.addTodo(event)">
-								<div class="form-group rm-my">
-									<div class="d-flex py-3 px-3 justify-content-around align-content-end">
-										<div class="align-items-center flex-grow-1">
-											<input type="text" name="description" class="form-control form-control-sm"
-												placeholder='Plan Next D&D Session' maxlength="30" required />
-										</div>
-										<div class="align-items-center ">
-											<button type="submit" id="todo-btn"
-												class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+							</div>
+							<div id="author" class="col-12 text-right align-self-end py-2 px-2">
+
+							</div>
+						</div>
+					</div>
+
+					<!-- SECTION Todos -->
+					<div class="col-4 align-items-center justify-items-end">
+
+						<div id="todo"
+							class="d-block bg-transparent card-effects tada rounded shadow rm-mx rm-pt rm-px px-4 ml-auto mr-3">
+							<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
+							<div id="todo-insert" class="row rm-mx font-purple d-flex justify-content-around custom-overflow rounded">
+							</div>
+
+							<!-- SECTION Form submit -->
+							<div class="">
+								<form onsubmit="app.todoController.addTodo(event)">
+									<div class="form-group rm-my">
+										<div class="d-flex py-3 px-3 justify-content-around align-content-end">
+											<div class="align-items-center flex-grow-1">
+												<input type="text" name="description" class="form-control form-control-sm"
+													placeholder='Plan Next D&D Session' maxlength="30" required />
+											</div>
+											<div class="align-items-center ">
+												<button type="submit" id="todo-btn"
+													class="action btn btn-sm btn-purple btn-outline-dark align-self-end">Add</button>
+											</div>
 										</div>
 									</div>
-								</div>
-							</form>
+								</form>
+							</div>
 						</div>
+
 					</div>
 
 				</div>
 
-			</div>
+
+			</section>
 
 
-		</section>
-
+		</div>
 	</div>
 
 
