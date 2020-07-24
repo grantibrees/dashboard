@@ -34,7 +34,19 @@
 
 				<!-- ANCHOR Top row. Weather. -->
 				<div class="row row-height pt-4">
-					<div class="col-9"></div>
+
+
+					<div class="col-3 d-flex align-items-center justify-content-center font-purple">
+						<div id="clock"
+							class="card d-block bg-transparent card-effects rounded shadow px-4 py-3 align-content-center align-items-center">
+							<div class="h3 mt-2"><span id="greeting-display"></span>.</div>
+							<div class="h3">It is the <span id="date-display"></span></div>
+							<div class="h3 mb-2">at <span id="time-display" class="font-lighter"></span>.</div>
+						</div>
+					</div>
+
+					<div class="col-6"></div>
+
 					<div class="col-3">
 						<div id="weather-draw" class="row font-white d-flex justify-content-end text-end">
 
@@ -63,15 +75,8 @@
 
 				</div> -->
 					</div>
+					<div class="col-6"></div>
 
-					<div class="col-6 d-flex align-items-center justify-content-center font-purple">
-						<div id="clock"
-							class="card d-block bg-transparent card-effects rounded shadow px-4 py-3 align-content-center align-items-center">
-							<div class="h3 mt-2"><span id="greeting-display"></span>.</div>
-							<div class="h3">It is the <span id="date-display"></span></div>
-							<div class="h3 mb-2">at <span id="time-display" class="font-lighter"></span>.</div>
-						</div>
-					</div>
 					<div class="col-3"></div>
 				</div>
 
@@ -99,7 +104,7 @@
 					<div class="col-4 align-items-center justify-items-end">
 
 						<div id="todo"
-							class="d-block bg-transparent card-effects tada rounded shadow rm-mx rm-pt rm-px px-4 ml-auto mr-3">
+							class="d-block bg-transparent card-effects tada rounded shadow rm-mx rm-pt rm-px px-4 ml-auto mr-4">
 							<h4 class="px-2 py-2 rm-my text-white font-inky-caps text-center">To-Do Items</h4>
 							<div id="todo-insert" class="row rm-mx font-purple d-flex justify-content-around custom-overflow rounded">
 							</div>
