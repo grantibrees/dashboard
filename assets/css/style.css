@@ -39,10 +39,11 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   position: fixed;
-  z-index: 9999999;
+  
+
   background-color: black;
-  transition-delay: 600ms;
-  transition: all 400ms ease;
+  transition-delay: 2600ms;
+  transition: all 1000ms ease;
 }
 
 .row-spacer{
@@ -58,11 +59,12 @@ body {
   color: var(--verydarkgrey);
 }
 
-.bg{
+#bg{
   background-position: center center;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -7;
 }
 .bg-overlay{
   height:100%;
@@ -71,7 +73,7 @@ body {
   /* backdrop-filter: blur(2px); */
   /* Make possible modal pop up and make the bg blurry */
   background-size:cover;
-  z-index: -3;
+  z-index: -6;
 }
 
 .card-effects{

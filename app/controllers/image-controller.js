@@ -6,10 +6,20 @@ import _store from "../store.js";
 
 function _drawImage() {
   document.getElementById('load-shade').style.backgroundColor = 'transparent'
-  document.getElementById('load-shade').style.zIndex = `-1`;
-  document.body.style.backgroundImage = `url(${_store.State.bgImage})`
+
+  // document.body.style.backgroundImage = `url(${_store.State.bgImage})`
+  document.getElementById("bg").style.backgroundImage = `url(${_store.State.bgImage})`
   document.getElementById("bg-image").classList.add("bg-overlay")
-  // setTimeout(function () { document.getElementById("loader").classList.add("hidden") }, 1200);
+  setTimeout(function () { document.getElementById("loader").classList.add("hidden") }, 1600);
+
+
+}
+
+function _removeOverlays() {
+  document.getElementById("loader").classList.add("hidden")
+  document.getElementById('bg-image').style.zIndex = `-99`
+  document.getElementById('load-shade').style.minHeight = `1px`
+  // document.getElementById('load-shade').style.minWidth = `1px`
 }
 
 export default class ImageController {
