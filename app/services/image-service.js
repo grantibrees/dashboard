@@ -4,13 +4,13 @@ import Image from "../models/image.js"
 // @ts-ignore
 const imgApi = axios.create({
   baseURL: "//bcw-sandbox.herokuapp.com/api/images",
-  timeout: 8000
+  timeout: 15000
 });
 
 // @ts-ignore
 const imgApi2 = axios.create({
   baseURL: "//bcw-sandbox.herokuapp.com/api/grantignotusbrees/",
-  timeout: 8000
+  timeout: 15000
 });
 
 //TODO create methods to retrieve data trigger the update window when it is complete
